@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jul 22 18:51:48 2026
+# Process ID: 23708
+# Current directory: D:/OneDrive/Desktop/FPGA/my_demo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29816 D:\OneDrive\Desktop\FPGA\my_demo\my_demo.xpr
+# Log file: D:/OneDrive/Desktop/FPGA/my_demo/vivado.log
+# Journal file: D:/OneDrive/Desktop/FPGA/my_demo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/OneDrive/Desktop/FPGA/my_demo/my_demo.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.gen/sources_1'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/OneDrive/Desktop/FPGA/my_demo/post_flow.tcl'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] impl_1 strategy "Vivado Implementation Defaults," step write_bitstream, attribute : Could not find the file 'D:/OneDrive/Desktop/FPGA/my_demo/post_flow.tcl'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/FPGA_Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 1281.914 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property STEPS.WRITE_BITSTREAM.TCL.POST {} [get_runs impl_1]
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 22 18:59:17 2026...

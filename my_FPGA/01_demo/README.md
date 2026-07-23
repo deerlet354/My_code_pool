@@ -1,0 +1,1 @@
+Includes parameter passing, port declarations, reset logic, counters, shift registers, and testbench drivers.

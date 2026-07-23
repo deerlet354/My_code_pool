@@ -1,0 +1,1546 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Jul 23 09:01:39 2026
+# Process ID: 30260
+# Current directory: D:/OneDrive/Desktop/FPGA/my_demo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17924 D:\OneDrive\Desktop\FPGA\my_demo\my_demo.xpr
+# Log file: D:/OneDrive/Desktop/FPGA/my_demo/vivado.log
+# Journal file: D:/OneDrive/Desktop/FPGA/my_demo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/OneDrive/Desktop/FPGA/my_demo/my_demo.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.gen/sources_1'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/OneDrive/Desktop/FPGA/my_demo/post_flow.tcl'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/FPGA_Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1242.059 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+ERROR: [VRFC 10-4982] syntax error near ';' [D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v:22]
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v:24]
+ERROR: [VRFC 10-2865] module 'tb_demo' ignored due to previous errors [D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1242.059 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_demo_behav -key {Behavioral:sim_1:Functional:tb_demo} -tclbatch {tb_demo.tcl} -view {D:/OneDrive/Desktop/FPGA/my_demo/tb_demo_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/OneDrive/Desktop/FPGA/my_demo/tb_demo_behav.wcfg
+WARNING: Simulation object /tb_demo/a was not found in the design.
+WARNING: Simulation object /tb_demo/b was not found in the design.
+WARNING: Simulation object /tb_demo/c was not found in the design.
+WARNING: Simulation object /tb_demo/d was not found in the design.
+WARNING: Simulation object /tb_demo/e was not found in the design.
+WARNING: Simulation object /tb_demo/f was not found in the design.
+source tb_demo.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_demo_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1242.059 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+remove_files  -fileset utils_1 D:/OneDrive/Desktop/FPGA/my_demo/post_flow.tcl
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/OneDrive/Desktop/FPGA/my_demo/my_demo.runs/synth_1
+
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1242.059 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_demo_behav -key {Behavioral:sim_1:Functional:tb_demo} -tclbatch {tb_demo.tcl} -view {D:/OneDrive/Desktop/FPGA/my_demo/tb_demo_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/OneDrive/Desktop/FPGA/my_demo/tb_demo_behav.wcfg
+WARNING: Simulation object /tb_demo/a was not found in the design.
+WARNING: Simulation object /tb_demo/b was not found in the design.
+WARNING: Simulation object /tb_demo/c was not found in the design.
+WARNING: Simulation object /tb_demo/d was not found in the design.
+WARNING: Simulation object /tb_demo/e was not found in the design.
+WARNING: Simulation object /tb_demo/f was not found in the design.
+source tb_demo.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_demo_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 1242.059 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1242.059 ; gain = 0.000
+run 10 us
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+ERROR: [VRFC 10-2989] 'i' is not declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+ERROR: [VRFC 10-2989] 'i' is not declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:17]
+ERROR: [VRFC 10-2989] 'i' is not declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:18]
+ERROR: [VRFC 10-2989] 'i' is not declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:21]
+ERROR: [VRFC 10-2865] module 'demo' ignored due to previous errors [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+ERROR: [VRFC 10-2989] 'DATA_LEN' is not declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:33]
+ERROR: [VRFC 10-2865] module 'demo' ignored due to previous errors [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+INFO: [Common 17-344] 'relaunch_sim' was cancelled
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+WARNING: [VRFC 10-3248] data object 'i' is already declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+WARNING: [VRFC 10-3248] data object 'i' is already declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+WARNING: [VRFC 10-3248] data object 'i' is already declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+WARNING: [VRFC 10-3248] data object 'i' is already declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+WARNING: [VRFC 10-3248] data object 'i' is already declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+WARNING: [VRFC 10-3248] data object 'i' is already declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+WARNING: [VRFC 10-3248] data object 'i' is already declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+WARNING: [VRFC 10-3248] data object 'i' is already declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+WARNING: [VRFC 10-3248] data object 'i' is already declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+WARNING: [VRFC 10-3248] data object 'i' is already declared [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 't_sys_in' is not permitted [D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v:24]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 't_sys_in' is not permitted [D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v:24]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 't_sys_in' is not permitted [D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v:24]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+ERROR: [VRFC 10-8414] extra comma in port association list is not allowed [D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v:25]
+ERROR: [VRFC 10-2865] module 'tb_demo' ignored due to previous errors [D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" Line 3. Module demo(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.demo(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_demo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_demo_behav
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/xsim.dir/tb_demo_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Jul 23 16:49:34 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1971.879 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1971.879 ; gain = 0.000
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1971.879 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/FPGA_Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_demo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_demo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/01_rtl/demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module demo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_demo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim'
+"xelab -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 92eb342baba142399170d35b1a0fa99f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_demo_behav xil_defaultlib.tb_demo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 't_sys_in' is not permitted [D:/OneDrive/Desktop/FPGA/my_demo/st/02_sim/tb_demo.v:24]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/OneDrive/Desktop/FPGA/my_demo/my_demo.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+save_wave_config {D:/OneDrive/Desktop/FPGA/my_demo/tb_demo_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 23 16:58:22 2026...

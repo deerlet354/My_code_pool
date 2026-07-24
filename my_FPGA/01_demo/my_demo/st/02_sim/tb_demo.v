@@ -11,6 +11,8 @@ initial begin
 	t_sys_clk <= 1'b0;
 	t_sys_reset <= 1'b0;
 	#100
+	@(posedge t_sys_clk);
+	#1
 	t_sys_reset <= 1'b1;
 end
 

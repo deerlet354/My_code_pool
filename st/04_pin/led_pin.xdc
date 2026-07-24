@@ -1,0 +1,16 @@
+create_clock -period 10.000 -name sysclk [get_ports sys_clk]
+set_property PACKAGE_PIN L5 [get_ports sys_clk]
+set_property PACKAGE_PIN H5 [get_ports sys_reset]
+set_property PACKAGE_PIN V19 [get_ports sys_out[3]]
+set_property PACKAGE_PIN U19 [get_ports sys_out[2]]
+set_property PACKAGE_PIN U16 [get_ports sys_out[1]]
+set_property PACKAGE_PIN T16 [get_ports sys_out[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports {sys_out[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sys_out[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sys_out[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sys_out[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports sys_clk]
+set_property IOSTANDARD LVCMOS18 [get_ports sys_reset]
+set_property BITSTREAM.GENERAL.COMPRESS true [current_design]
+
+

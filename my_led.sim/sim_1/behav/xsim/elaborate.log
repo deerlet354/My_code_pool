@@ -1,0 +1,16 @@
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/FPGA_Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 6794bbb930624fa4b8dc7184d48f390d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_led_behav xil_defaultlib.tb_led xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_led/st/01_rtl/led.v" Line 1. Module led(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/OneDrive/Desktop/FPGA/my_led/st/01_rtl/led.v" Line 1. Module led(CNT_MAX=9) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.led(CNT_MAX=9)
+Compiling module xil_defaultlib.tb_led
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_led_behav

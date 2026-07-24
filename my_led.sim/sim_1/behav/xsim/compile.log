@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_led/st/01_rtl/led.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module led
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/OneDrive/Desktop/FPGA/my_led/st/02_sim/tb_led.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_led

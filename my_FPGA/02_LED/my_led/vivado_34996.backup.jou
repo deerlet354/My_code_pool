@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Jul 23 20:39:38 2026
+# Process ID: 34996
+# Current directory: D:/OneDrive/Desktop/FPGA/my_led
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32484 D:\OneDrive\Desktop\FPGA\my_led\my_led.xpr
+# Log file: D:/OneDrive/Desktop/FPGA/my_led/vivado.log
+# Journal file: D:/OneDrive/Desktop/FPGA/my_led\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/OneDrive/Desktop/FPGA/my_led/my_led.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/OneDrive/Desktop/FPGA/my_led/tb_led_behav.wcfg
+source tb_led.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {D:/OneDrive/Desktop/FPGA/my_led/tb_led_behav.wcfg}
+close_sim

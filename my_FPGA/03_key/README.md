@@ -1,0 +1,1 @@
+This project implements button debouncing using a state machine, state delay, a shift register, and millisecond-level delays.

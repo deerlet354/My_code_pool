@@ -1,0 +1,61 @@
+#include <REGX52.H>
+
+//段码表 					  0    1    2    3    4    5    6    7    8    9
+unsigned char ledArr[10] = {0X3F,0X06,0X5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F};
+//P2.2 P2.3 P2.4 即就是P2的D2-D4  
+//则只需变这三位，其余位不变 
+//0:000 000 00  1:000 001 00  2:000 010 00  3:000 011 00 4:000 100 00 ...
+unsigned char ledWei[8] = {0x00,0x04,0x08,0x0C,0x10,0x14,0x18,0x1C};
+
+void Delay(unsigned int xms)
+{
+	unsigned char data i, j;
+
+	while(xms){
+		i = 2;
+		j = 239;
+		do
+		{
+			while (--j);
+		} while (--i);
+		xms --;
+	}
+}
+
+
+void main(){
+
+	unsigned char i,j;
+	
+	while(1){
+		for(i = 0;j < 10;j ++){
+			for(i = 0;i < 8;i ++){
+				//先清除P2的D2-D4,其他位不变，再或 ledWei[1];就是要选的数码管的位
+				P2 = (P2 & 0xE3) | ledWei[i];
+				P0 = ledArr[j];
+				Delay(1);
+				P0 = 0x00;//消影
+			}
+			Delay(50);
+		}
+		if(j == 10 && i == 8) j = 0;i = 0;
+	}
+}
+
+//void main(){
+
+//	unsigned char i,j;
+//	
+//	while(1){
+//		for(i = 0;i < 8;i ++){
+//			for(j = 0;j < 10;j ++){
+//				//先清除P2的D2-D4,其他位不变，再或 ledWei[1];就是要选的数码管的位
+//				P2 = (P2 & 0xE3) | ledWei[i];
+//				P0 = ledArr[j];
+//				Delay(100);
+//				P0 = 0x00;//消影
+//			}
+//		}
+//		if(j == 10 && i == 8) j = 0;i = 0;
+//	}
+//}

@@ -1,0 +1,59 @@
+C51 COMPILER V9.54   MAIN                                                                  07/17/2026 14:55:21 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          //段码表                                          0    1    2    3    4    5    6    7    8    9
+   4          unsigned char ledArr[10] = {0X3F,0X06,0X5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F};
+   5          //P2.2 P2.3 P2.4 即就是P2的D2-D4  
+   6          //则只需变这三位，其余位不变 
+   7          //0:000 000 00  1:000 001 00  2:000 010 00  3:000 011 00 4:000 100 00 ...
+   8          //unsigned char ledWei[8] = {0x00,0x04,0x08,0x0C,0x10,0x14,0x18,0x1C};
+   9          
+  10          void Nixie(unsigned char Location,unsigned char Number){
+  11   1              switch(Location){
+  12   2                      case 1:P2_4 = 0;P2_3 = 0;P2_2 = 0;break;
+  13   2                      case 2:P2_4 = 0;P2_3 = 0;P2_2 = 1;break;
+  14   2                      case 3:P2_4 = 0;P2_3 = 1;P2_2 = 0;break;
+  15   2                      case 4:P2_4 = 0;P2_3 = 1;P2_2 = 1;break;
+  16   2                      case 5:P2_4 = 1;P2_3 = 0;P2_2 = 0;break;
+  17   2                      case 6:P2_4 = 1;P2_3 = 0;P2_2 = 1;break;
+  18   2                      case 7:P2_4 = 1;P2_3 = 1;P2_2 = 0;break;
+  19   2                      case 8:P2_4 = 1;P2_3 = 1;P2_2 = 1;break;
+  20   2              }
+  21   1              P0 = ledArr[Number];
+  22   1      }
+  23          
+  24          //void Nixie(unsigned char Location,unsigned char Number){
+  25          //      P2 = (P2 & 0xE3) | ledWei[Location - 1];
+  26          //      P0 = ledArr[Number];
+  27          //}
+  28          
+  29          void main(){
+  30   1              
+  31   1              Nixie(4,6);
+  32   1              
+  33   1              while(1){
+  34   2              }
+  35   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    108    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

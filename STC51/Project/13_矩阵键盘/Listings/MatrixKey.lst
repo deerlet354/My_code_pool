@@ -1,0 +1,105 @@
+C51 COMPILER V9.54   MATRIXKEY                                                             07/21/2026 12:25:06 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MATRIXKEY
+OBJECT MODULE PLACED IN .\Objects\MatrixKey.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE MatrixKey.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\MatrixKey.lst) OBJECT(.\Objects\MatrixKey.obj)
+
+line level    source
+
+   1          #include "MatrixKey.h"
+   2          
+   3          /*unsigned char MatrixKey(){
+   4          
+   5                  unsigned char KeyNumber = 0;
+   6                  P1 = 0xFF;
+   7                  P1_3 = 0;
+   8                  Delay(1);
+   9                  if(P1_7 == 0){Delay(20);while(P1_7 == 0);Delay(20);return KeyNumber = 1;}
+  10                  if(P1_6 == 0){Delay(20);while(P1_6 == 0);Delay(20);return KeyNumber = 5;}
+  11                  if(P1_5 == 0){Delay(20);while(P1_5 == 0);Delay(20);return KeyNumber = 9;}
+  12                  if(P1_4 == 0){Delay(20);while(P1_4 == 0);Delay(20);return KeyNumber = 13;}
+  13                  
+  14                  P1 = 0xFF;
+  15                  P1_2 = 0;
+  16                  Delay(1);
+  17                  if(P1_7 == 0){Delay(20);while(P1_7 == 0);Delay(20);return KeyNumber = 2;}
+  18                  if(P1_6 == 0){Delay(20);while(P1_6 == 0);Delay(20);return KeyNumber = 6;}
+  19                  if(P1_5 == 0){Delay(20);while(P1_5 == 0);Delay(20);return KeyNumber = 10;}
+  20                  if(P1_4 == 0){Delay(20);while(P1_4 == 0);Delay(20);return KeyNumber = 14;}
+  21                  
+  22                  P1 = 0xFF;
+  23                  P1_1 = 0;
+  24                  Delay(1);
+  25                  if(P1_7 == 0){Delay(20);while(P1_7 == 0);Delay(20);return KeyNumber = 3;}
+  26                  if(P1_6 == 0){Delay(20);while(P1_6 == 0);Delay(20);return KeyNumber = 7;}
+  27                  if(P1_5 == 0){Delay(20);while(P1_5 == 0);Delay(20);return KeyNumber = 11;}
+  28                  if(P1_4 == 0){Delay(20);while(P1_4 == 0);Delay(20);return KeyNumber = 15;}
+  29                  
+  30                  P1 = 0xFF;
+  31                  P1_0 = 0;
+  32                  Delay(1);
+  33                  if(P1_7 == 0){Delay(20);while(P1_7 == 0);Delay(20);return KeyNumber = 4;}
+  34                  if(P1_6 == 0){Delay(20);while(P1_6 == 0);Delay(20);return KeyNumber = 8;}
+  35                  if(P1_5 == 0){Delay(20);while(P1_5 == 0);Delay(20);return KeyNumber = 12;}
+  36                  if(P1_4 == 0){Delay(20);while(P1_4 == 0);Delay(20);return KeyNumber = 16;}
+  37          
+  38                  
+  39                  
+  40                  return KeyNumber;
+  41          }*/
+  42          
+  43          unsigned char KeyDown(){
+  44   1              char a = 0;
+  45   1              unsigned char KeyVal = 0;
+  46   1              
+  47   1              P1 = 0x0f;// 0000 1111  行置低 列置高
+  48   1              
+  49   1              if(P1 != 0x0f){
+  50   2                      Delay(20);
+  51   2                      if(P1 != 0x0f){
+  52   3                              //测试列
+  53   3                              switch(P1){
+  54   4                                      case(0x07): KeyVal = 1;break; // 0000  0111         8 4 2 1
+C51 COMPILER V9.54   MATRIXKEY                                                             07/21/2026 12:25:06 PAGE 2   
+
+  55   4                                      case(0x0B): KeyVal = 2;break; // 0000  1011         8 4 2 1
+  56   4                                      case(0x0D): KeyVal = 3;break; // 0000  1101         8 4 2 1
+  57   4                                      case(0x0E): KeyVal = 4;break; // 0000  1110         8 4 2 1
+  58   4                              }
+  59   3                              //测试行
+  60   3                              P1 = 0xF0;
+  61   3                              switch(P1){
+  62   4                                      case(0x70): KeyVal = KeyVal;break; // 0111  0000         8 4 2 1
+  63   4                                      case(0xB0): KeyVal = KeyVal + 4;break; // 1011  0000         8 4 2 1
+  64   4                                      case(0xD0): KeyVal = KeyVal + 8;break; // 1101  0000         8 4 2 1
+  65   4                                      case(0xE0): KeyVal = KeyVal + 12;break; // 110  0000         8 4 2 1
+  66   4                              }
+  67   3                              while((a < 50) && (P1 != 0xF0))
+  68   3                              {
+  69   4                                      Delay(20);
+  70   4                                      a++;
+  71   4                              }
+  72   3                      }
+  73   2                      return KeyVal;
+  74   2              }else{
+  75   2                      return 0;
+  76   2              }
+  77   1      }
+  78          
+  79          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    136    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

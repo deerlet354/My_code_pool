@@ -1,0 +1,136 @@
+C51 COMPILER V9.54   MAIN                                                                  07/16/2026 15:15:33 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include <INTRINS.H>
+   3          
+   4          /*
+   5          volatile unsigned int interrupt_cnt = 0;//中断次数计数器
+   6          volatile bit timer_1ms_flag = 0;//1ms到达标志
+   7          
+   8          void Timer0_Init_1ms_IT(void){
+   9                  TMOD &= 0xF0;//清空低四位，保留高四位配置
+  10                  TMOD |= 0x02;//方式1，16位定时器
+  11                  TH0 = 0x06;
+  12                  TL0 = 0x06;
+  13                  TF0 = 0;
+  14                  EA = 1; //开启总中断允许
+  15                  ET0 = 1;//开始定时器0的中断允许
+  16                  TR0 = 1;//允许定时器0开始计数
+  17          }
+  18          
+  19          //T0中断服务函数
+  20          void Timer0_ISR(void) interrupt 1{
+  21                  //每次中断，毫秒计数器加1
+  22                  interrupt_cnt ++; //累加中断次数（每250us加1）
+  23                  
+  24                  if(interrupt_cnt >= 2000){//累加2000次 = 250us * 2000 = 500000us = 500ms
+  25                          interrupt_cnt = 0;
+  26                          timer_1ms_flag = 1;
+  27                  }
+  28          }
+  29          
+  30          void Delay500ms() //12MHZ   T = 12 / fosc = 12 / 12 000 000 = 1us
+  31          { 
+  32                  unsigned char i,j,k;
+  33                  
+  34                  _nop_(); //空指令，占一个机器周期，1us
+  35                  i = 4;
+  36                  j = 205;
+  37                  k = 187;
+  38                  do{
+  39                          do{
+  40                                  while (--k);
+  41                          }while(--j);
+  42                  }while(--i);
+  43          }*/
+  44          
+  45          volatile unsigned int ms_counter = 0;
+  46          volatile bit timer_500ms_flag = 0;//1ms到达标志
+  47          
+  48          void Timer0_Init_1ms_IT(void){
+  49   1              TMOD &= 0xF0;//清空低四位，保留高四位配置
+  50   1              TMOD |= 0x01;//方式1，16位定时器
+  51   1              TH0 = 0XFC;
+  52   1              TL0 = 0X18;
+  53   1              TF0 = 0;
+  54   1              EA = 1; //开启总中断允许
+C51 COMPILER V9.54   MAIN                                                                  07/16/2026 15:15:33 PAGE 2   
+
+  55   1              ET0 = 1;//开始定时器0的中断允许
+  56   1              TR0 = 1;//允许定时器0开始计数
+  57   1      }
+  58          
+  59          //T0中断服务函数
+  60          void Timer0_ISR(void) interrupt 1{
+  61   1              //重新赋初值，为下一次1ms中断做准备
+  62   1              TH0 = 0XFC;
+  63   1              TL0 = 0X18;
+  64   1              //每次中断，毫秒计数器加1
+  65   1              ms_counter ++;
+  66   1              
+  67   1              if(ms_counter >= 500){
+  68   2                      timer_500ms_flag = 1;
+  69   2                      ms_counter = 0;
+  70   2              }
+  71   1      }
+  72          
+  73          
+  74          void main(){
+  75   1      
+  76   1              Timer0_Init_1ms_IT();
+  77   1              P2_0 = 0;
+  78   1              while(1){
+  79   2                      
+  80   2                      if(timer_500ms_flag){
+  81   3                              timer_500ms_flag = 0;
+  82   3                              P2_0 = !P2_0;
+  83   3                      }
+  84   2              }
+  85   1      }
+  86          
+  87          //void main(){
+  88          
+  89          //      Timer0_Init_1ms_IT();
+  90          //      P2_0 = 0;
+  91          //      while(1){
+  92          //              
+  93          //              if(timer_1ms_flag){
+  94          //                      timer_1ms_flag = 0;
+  95          //                      P2_0 = !P2_0;
+  96          //              }
+  97          //      }
+  98          //}
+  99          
+ 100          //void main(){
+ 101          
+ 102          //      while(1){
+ 103          //              P2 = 0XFE;
+ 104          //              Delay500ms();
+ 105          //              P2 = 0XFF;
+ 106          //              Delay500ms();
+ 107          //      }
+ 108          //}
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     77    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+C51 COMPILER V9.54   MAIN                                                                  07/16/2026 15:15:33 PAGE 3   
+
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,126 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/16/2026  15:15:33  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\Project PRINT (.\Listings\Project.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\Project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?MAIN
+                    000AH     0016H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         ?BI?MAIN
+                    0020H.1   0000H.7                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+                    000EH     07F2H                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     002AH     UNIT         ?PR?TIMER0_ISR?MAIN
+            CODE    08B6H     0015H     UNIT         ?PR?TIMER0_INIT_1MS_IT?MAIN
+            CODE    08CBH     000EH     UNIT         ?PR?MAIN?MAIN
+            CODE    08D9H     0007H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Project (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?TIMER0_INIT_1MS_IT?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Project (MAIN)
+
+  VALUE           TYPE          NAME
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/16/2026  15:15:33  PAGE 2
+
+
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:088CH         PUBLIC        Timer0_ISR
+  B:00A8H.7       PUBLIC        EA
+  B:00A0H.0       PUBLIC        P2_0
+  C:08B6H         PUBLIC        Timer0_Init_1ms_IT
+  C:08CBH         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  D:0008H         PUBLIC        ms_counter
+  B:00A8H.1       PUBLIC        ET0
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  B:0020H.0       PUBLIC        timer_500ms_flag
+  -------         PROC          TIMER0_INIT_1MS_IT
+  C:08B6H         LINE#         48
+  C:08B6H         LINE#         49
+  C:08B9H         LINE#         50
+  C:08BCH         LINE#         51
+  C:08BFH         LINE#         52
+  C:08C2H         LINE#         53
+  C:08C4H         LINE#         54
+  C:08C6H         LINE#         55
+  C:08C8H         LINE#         56
+  C:08CAH         LINE#         57
+  -------         ENDPROC       TIMER0_INIT_1MS_IT
+  -------         PROC          TIMER0_ISR
+  C:088CH         LINE#         60
+  C:0890H         LINE#         62
+  C:0893H         LINE#         63
+  C:0896H         LINE#         65
+  C:089EH         LINE#         67
+  C:08A9H         LINE#         68
+  C:08ABH         LINE#         69
+  C:08B1H         LINE#         70
+  C:08B1H         LINE#         71
+  -------         ENDPROC       TIMER0_ISR
+  -------         PROC          MAIN
+  C:08CBH         LINE#         74
+  C:08CBH         LINE#         76
+  C:08CEH         LINE#         77
+  C:08D0H         LINE#         78
+  C:08D0H         LINE#         80
+  C:08D3H         LINE#         81
+  C:08D5H         LINE#         82
+  C:08D7H         LINE#         83
+  C:08D7H         LINE#         84
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0056H BYTE ( 4%) *
+******************************************************************************
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/16/2026  15:15:33  PAGE 3
+
+
+Program Size: data=11.1 xdata=0 code=230
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

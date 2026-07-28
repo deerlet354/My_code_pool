@@ -1,0 +1,126 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/16/2026  16:32:19  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\Project PRINT (.\Listings\Project.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (STRLEN)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+
+
+LINK MAP OF MODULE:  .\Objects\Project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         ?DT?MAIN
+            DATA    0010H     0002H     UNIT         _DATA_GROUP_
+            IDATA   0012H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     0068H     UNIT         ?PR?MAIN?MAIN
+            CODE    08F4H     0019H     UNIT         ?C?LIB_CODE
+            CODE    090DH     0015H     UNIT         ?PR?_STRLEN?STRLEN
+            CODE    0922H     0014H     UNIT         ?PR?_DELAY1MS?MAIN
+            CODE    0936H     000BH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Project (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                  0010H    0002H
+  +--> ?PR?_STRLEN?STRLEN
+  +--> ?PR?_DELAY1MS?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Project (MAIN)
+
+  VALUE           TYPE          NAME
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/16/2026  16:32:19  PAGE 2
+
+
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:0922H         PUBLIC        _Delay1ms
+  C:088CH         PUBLIC        main
+  D:0008H         PUBLIC        str
+  -------         PROC          _DELAY1MS
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0005H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0922H         LINE#         6
+  C:0922H         LINE#         7
+  C:0922H         LINE#         9
+  C:0926H         LINE#         10
+  C:0928H         LINE#         11
+  C:092AH         LINE#         13
+  C:092AH         LINE#         14
+  C:092CH         LINE#         15
+  C:092EH         LINE#         16
+  C:0933H         LINE#         17
+  C:0935H         LINE#         18
+  -------         ENDPROC       _DELAY1MS
+  -------         PROC          MAIN
+  -------         DO            
+  D:0010H         SYMBOL        i
+  -------         ENDDO         
+  C:088CH         LINE#         20
+  C:088CH         LINE#         22
+  C:088FH         LINE#         23
+  C:088FH         LINE#         24
+  C:0894H         LINE#         25
+  C:08A6H         LINE#         26
+  C:08AEH         LINE#         27
+  C:08B5H         LINE#         28
+  C:08BFH         LINE#         29
+  C:08DBH         LINE#         30
+  C:08E3H         LINE#         31
+  C:08EAH         LINE#         32
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        STRLEN
+  C:090DH         PUBLIC        _STRLEN
+  -------         ENDMOD        STRLEN
+
+  -------         MODULE        ?C?CLDPTR
+  C:08F4H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0086H BYTE ( 6%) *
+******************************************************************************
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/16/2026  16:32:19  PAGE 3
+
+
+Program Size: data=19.0 xdata=0 code=324
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

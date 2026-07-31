@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Jul 31 16:07:04 2026
+# Process ID: 5772
+# Current directory: D:/OneDrive/Desktop/FPGA/my_uart_tx
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26636 D:\OneDrive\Desktop\FPGA\my_uart_tx\my_uart_tx.xpr
+# Log file: D:/OneDrive/Desktop/FPGA/my_uart_tx/vivado.log
+# Journal file: D:/OneDrive/Desktop/FPGA/my_uart_tx\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/OneDrive/Desktop/FPGA/my_uart_tx/my_uart_tx.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/OneDrive/Desktop/FPGA/my_uart_tx/tb_top_uart_tx_behav.wcfg
+source tb_top_uart_tx.tcl
+run 5 ms
+relaunch_sim
+run 5 ms
+run 5 ms
+save_wave_config {D:/OneDrive/Desktop/FPGA/my_uart_tx/tb_top_uart_tx_behav.wcfg}
+save_wave_config {D:/OneDrive/Desktop/FPGA/my_uart_tx/tb_top_uart_tx_behav.wcfg}
+save_wave_config {D:/OneDrive/Desktop/FPGA/my_uart_tx/tb_top_uart_tx_behav.wcfg}
+save_wave_config {D:/OneDrive/Desktop/FPGA/my_uart_tx/tb_top_uart_tx_behav.wcfg}
+save_wave_config {D:/OneDrive/Desktop/FPGA/my_uart_tx/tb_top_uart_tx_behav.wcfg}
+save_wave_config {D:/OneDrive/Desktop/FPGA/my_uart_tx/tb_top_uart_tx_behav.wcfg}
+add_files -fileset constrs_1 -norecurse D:/OneDrive/Desktop/FPGA/my_uart_tx/st/04_pin/uart_tx_pin.xdc
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+relaunch_sim
+run 5 ms
+run 5 ms
+relaunch_sim
+run 5 ms
+run 5 ms
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/OneDrive/Desktop/FPGA/my_uart_tx/my_uart_tx.runs/impl_1/uart_top.bit} [get_hw_devices xc7z015_1]
+current_hw_device [get_hw_devices xc7z015_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z015_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property PROGRAM.FILE {D:/OneDrive/Desktop/FPGA/my_uart_tx/my_uart_tx.runs/impl_1/uart_top.bit} [get_hw_devices xc7z015_1]
+program_hw_devices [get_hw_devices xc7z015_1]
+refresh_hw_device [lindex [get_hw_devices xc7z015_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property PROGRAM.FILE {D:/OneDrive/Desktop/FPGA/my_uart_tx/my_uart_tx.runs/impl_1/uart_top.bit} [get_hw_devices xc7z015_1]
+program_hw_devices [get_hw_devices xc7z015_1]
+refresh_hw_device [lindex [get_hw_devices xc7z015_1] 0]
+close_sim
+launch_simulation
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property PROGRAM.FILE {D:/OneDrive/Desktop/FPGA/my_uart_tx/my_uart_tx.runs/impl_1/uart_top.bit} [get_hw_devices xc7z015_1]
+program_hw_devices [get_hw_devices xc7z015_1]
+refresh_hw_device [lindex [get_hw_devices xc7z015_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property PROGRAM.FILE {D:/OneDrive/Desktop/FPGA/my_uart_tx/my_uart_tx.runs/impl_1/uart_top.bit} [get_hw_devices xc7z015_1]
+program_hw_devices [get_hw_devices xc7z015_1]
+refresh_hw_device [lindex [get_hw_devices xc7z015_1] 0]

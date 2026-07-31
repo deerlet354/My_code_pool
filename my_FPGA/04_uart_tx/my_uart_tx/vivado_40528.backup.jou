@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Jul 28 15:31:10 2026
+# Process ID: 40528
+# Current directory: D:/OneDrive/Desktop/FPGA/my_uart_tx
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12828 D:\OneDrive\Desktop\FPGA\my_uart_tx\my_uart_tx.xpr
+# Log file: D:/OneDrive/Desktop/FPGA/my_uart_tx/vivado.log
+# Journal file: D:/OneDrive/Desktop/FPGA/my_uart_tx\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/OneDrive/Desktop/FPGA/my_uart_tx/my_uart_tx.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_top_uart_tx.tcl
+relaunch_sim
+relaunch_sim
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+relaunch_sim
+run 10 ms
+relaunch_sim
+run 10 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+relaunch_sim
+run 10 ms
+relaunch_sim
+run 10 ms
+relaunch_sim
+run 10 ms
+save_wave_config {D:/OneDrive/Desktop/FPGA/my_uart_tx/tb_top_uart_tx_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/OneDrive/Desktop/FPGA/my_uart_tx/tb_top_uart_tx_behav.wcfg
+set_property xsim.view D:/OneDrive/Desktop/FPGA/my_uart_tx/tb_top_uart_tx_behav.wcfg [get_filesets sim_1]
+close_sim

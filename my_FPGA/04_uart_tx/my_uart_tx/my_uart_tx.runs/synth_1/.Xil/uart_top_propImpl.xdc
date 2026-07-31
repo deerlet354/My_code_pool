@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:D:/OneDrive/Desktop/FPGA/my_uart_tx/st/04_pin/uart_tx_pin.xdc rfile:../../../st/04_pin/uart_tx_pin.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN L5 [get_ports sysclk_i]
+set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN R4 [get_ports uart_tx_o]

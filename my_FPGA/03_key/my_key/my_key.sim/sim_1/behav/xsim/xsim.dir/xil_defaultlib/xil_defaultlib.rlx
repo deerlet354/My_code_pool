@@ -1,9 +1,0 @@
-0.7
-2020.2
-Jun 10 2021
-20:04:57
-D:/OneDrive/Desktop/FPGA/my_key/my_key.sim/sim_1/behav/xsim/glbl.v,1623370582,verilog,,,,glbl,,,,,,,,
-D:/OneDrive/Desktop/FPGA/my_key/st/01_rtl/key.v,1785052250,verilog,,D:/OneDrive/Desktop/FPGA/my_key/st/01_rtl/led.v,,key,,,,,,,,
-D:/OneDrive/Desktop/FPGA/my_key/st/01_rtl/led.v,1784889026,verilog,,D:/OneDrive/Desktop/FPGA/my_key/st/01_rtl/top_key.v,,led,,,,,,,,
-D:/OneDrive/Desktop/FPGA/my_key/st/01_rtl/top_key.v,1785053571,verilog,,D:/OneDrive/Desktop/FPGA/my_key/st/02_sim/tb_top_key.v,,top_key,,,,,,,,
-D:/OneDrive/Desktop/FPGA/my_key/st/02_sim/tb_top_key.v,1785055182,verilog,,,,tb_top_key,,,,,,,,

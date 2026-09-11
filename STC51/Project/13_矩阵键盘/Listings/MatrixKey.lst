@@ -1,4 +1,4 @@
-C51 COMPILER V9.54   MATRIXKEY                                                             07/21/2026 12:25:06 PAGE 1   
+C51 COMPILER V9.54   MATRIXKEY                                                             08/03/2026 16:47:33 PAGE 1   
 
 
 C51 COMPILER V9.54, COMPILATION OF MODULE MATRIXKEY
@@ -62,7 +62,7 @@ line level    source
   52   3                              //≤‚ ‘¡–
   53   3                              switch(P1){
   54   4                                      case(0x07): KeyVal = 1;break; // 0000  0111         8 4 2 1
-C51 COMPILER V9.54   MATRIXKEY                                                             07/21/2026 12:25:06 PAGE 2   
+C51 COMPILER V9.54   MATRIXKEY                                                             08/03/2026 16:47:33 PAGE 2   
 
   55   4                                      case(0x0B): KeyVal = 2;break; // 0000  1011         8 4 2 1
   56   4                                      case(0x0D): KeyVal = 3;break; // 0000  1101         8 4 2 1
@@ -71,10 +71,10 @@ line level    source
   59   3                              //≤‚ ‘––
   60   3                              P1 = 0xF0;
   61   3                              switch(P1){
-  62   4                                      case(0x70): KeyVal = KeyVal;break; // 0111  0000         8 4 2 1
-  63   4                                      case(0xB0): KeyVal = KeyVal + 4;break; // 1011  0000         8 4 2 1
-  64   4                                      case(0xD0): KeyVal = KeyVal + 8;break; // 1101  0000         8 4 2 1
-  65   4                                      case(0xE0): KeyVal = KeyVal + 12;break; // 110  0000         8 4 2 1
+  62   4                                      case(0x70): KeyVal = KeyVal;break;              // 0111  0000         8 4 2 1
+  63   4                                      case(0xB0): KeyVal = KeyVal + 4;break;  // 1011  0000         8 4 2 1
+  64   4                                      case(0xD0): KeyVal = KeyVal + 8;break;  // 1101  0000         8 4 2 1
+  65   4                                      case(0xE0): KeyVal = KeyVal + 12;break; // 1101  0000         8 4 2 1
   66   4                              }
   67   3                              while((a < 50) && (P1 != 0xF0))
   68   3                              {

@@ -1,24 +1,42 @@
-# 忽略 Vivado 工程生成的大型缓存和编译目录
+# ===== Vivado 生成目录 =====
 *.cache/
 *.hw/
 *.ip_user_files/
 *.runs/
 *.sim/
+*.gen/
 .Xil/
+xsim.dir/
 
-# 忽略 Vivado 的日志、备份、进程和波形文件
+# ===== Vivado 日志、备份、进程、波形 =====
 *.jou
 *.log
 *.backup.*
 *.str
 *.wdb
 *.wbp
+*.pb
+*.wcfg
+*.tmp
+*.bak
+webtalk*
+xsim*
+xvlog*
+xelab*
 
-# 忽略操作系统产生的垃圾文件
+# ===== Vivado 自动生成的脚本和临时文件 =====
+compile.bat
+elaborate.bat
+simulate.bat
+TempBreakPointFile.txt
+Compile_Options.txt
+*.lpr
+
+# ===== 操作系统垃圾文件 =====
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# 忽略包管理相关（如果你用到了）
+# ===== 其他（可选）=====
 node_modules/
 package-lock.json

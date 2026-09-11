@@ -40,6 +40,13 @@
 	return KeyNumber;
 }*/
 
+/**
+  * @brief 矩阵键盘读取键盘键码
+  * @param 无
+  * @retval KeyVal 按下按键的键码值
+  * 	 		 当按下按键不松时，延时大约1s就会输出。没有按键按下时，输出0
+  */
+
 unsigned char KeyDown(){
 	char a = 0;
 	unsigned char KeyVal = 0;
